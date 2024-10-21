@@ -22,7 +22,29 @@
         </nav>
     </header>
 
-    <div class="con-head-cart">
+    <div class="table-con">
+        <table>
+            <thead>
+                <tr class="table-head">
+                    <th>Product</th>
+                    <th>Product Name</th>
+                    <th>Quantity</th>
+                    <th>Sub Total</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody class="cart-div" id="cart-div"></tbody>
+        </table>
+    </div>
+    
+    <h2>Total Price: <span id="total-price">$0.00</span></h2>
+
+    <div class="div-b">
+        <button id="checkout-button">Checkout</button>
+    </div>
+    
+
+    <!-- <div class="con-head-cart">
         <div class="header_cart">
             <h4>Product</h4>
             <div class="t-header">
@@ -32,16 +54,14 @@
             </div>
         </div>
 
-        <div class="cart-div" id="cart-div">
-            <!-- Cart items will be dynamically loaded here -->
-        </div>
+        <div class="cart-div" id="cart-div"></div>
 
         <h2>Total Price: <span id="total-price">$0.00</span></h2>
 
         <div class="div-b">
             <button id="checkout-button">Checkout</button>
         </div>
-    </div>
+    </div> -->
 
     <div id="receipt-modal" class="modal" style="display:none;">
         <div class="modal-content">

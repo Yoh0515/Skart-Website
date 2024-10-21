@@ -100,9 +100,11 @@ header {
 }
 
 .cart-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr; 
+    font-weight: bold;
+    text-align: center;
+    width: 700px;
 }
 .cart-item:hover{
     background-color: #ddd;
@@ -414,11 +416,11 @@ body.showCart .container{
 
 }
 
-.cart-div {
-    height: 60vh;
+/* .cart-div {
+    height: 100px;
     overflow-y: scroll;
     border-bottom: 1px gray solid;
-}
+} */
 
 .div-b button {
     display: flex;
@@ -434,12 +436,8 @@ body.showCart .container{
     color: white;
     font-weight: 200;
     margin-top: 50px;
-    justify-content: space-between;
 }
 
-.quanty {
-    margin-left: 400px;
-}
 
 .t-header{
     display: flex;
@@ -470,51 +468,49 @@ body.showCart .container{
 }
 
 .content_2 {
-    background-color: white;
     width: fit-content;
     border-radius: 15px;
 }
 
 .product-con {
     display: flex;
-    flex-direction: column;
     align-items: center;
     gap: 10px;
-    width: 200px;
     justify-content: center;
+    color: black;
+    padding-right: 30px;
 }
 
 .num-quantity {
-    width: 60px;
     display: flex;
-    padding-left: 160px;
     align-items: center;
     justify-content: center;
+    color: black;
     gap: 6px;
+    padding-right: 40px;
 }
 
 .num-quantity span {
     font-size: 15px;
     padding: 2px;
     margin: 3px;
+    color: black;
     cursor: pointer;
-    background-color: rgb(216, 216, 216);
 }
 
 .sub-total {
-    width: 50px;
+    color: black;
+    justify-content: center;
     display: flex;
     align-items: center;
-    padding-left: 30px;
-    justify-content: center;
+    padding-right: 20px;
 }
 
 .action-b {
-    width: 90px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-right: 30px;
+    padding-right: 18px;
 }
 
 .delete-b {
@@ -579,4 +575,59 @@ body.showCart .container{
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+.table-con {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-direction: column;
+    width: 100%; 
+    overflow: hidden;
+}
+
+
+.table-head {
+    background-color: #e74c3c;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr; /* Adjust as needed */
+    gap: 10px; /* Add spacing between items */
+    font-weight: bold;
+    text-align: center;
+    width: 700px;
+    padding: 10px;
+}
+
+.table-body {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr; /* Adjust as needed */
+    gap: 10px;
+    text-align: center;
+    color: black;
+    background-color: rgb(216, 201, 201);
+}
+
+table {
+    border-collapse: collapse;
+}
+thead {
+    background-color: #f2f2f2; /* Optional, to distinguish headers */
+}
+
+tbody::-webkit-scrollbar {
+    display: none; 
+}
+
+tbody {
+    display: block; 
+    overflow-y: auto;
+    height: 400px;
+    scrollbar-width: none;
+}
+ca
+thead, tbody tr {
+    display: table;
+    table-layout: fixed; /* Ensures the width of columns in tbody matches thead */
 }

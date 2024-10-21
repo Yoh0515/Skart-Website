@@ -58,23 +58,24 @@ document.addEventListener('DOMContentLoaded', () => {
             cartItem.classList.add('cart-item');
 
             cartItem.innerHTML = `
+
                 <div class="cart-product">
                     <img src="${item.image}" alt="${item.name}" class="cart-product-img" style="width: 100px; height: 100px; margin: 20px; border-radius: 15px; box-shadow: 0px 5px 5px 0px black;">
                 </div>
                 <div class="product-con">
                     <h6>${item.name}</h6>
                 </div>
-                    <div class="num-quantity">
-                        <span class="decrease-quantity" data-index="${index}">-</span>
+                <div class="num-quantity">
+                    <span class="decrease-quantity" data-index="${index}">-</span>
                     <h6>${item.quantity}</h6>
                     <span class="increase-quantity" data-index="${index}">+</span>
-                    </div>
-                    <div class="sub-total">
-                        <h6>$${itemSubtotal.toFixed(2)}</h6>
-                    </div>
-                    <div class="action-b">
-                        <h6 class="delete-b" data-index="${index}">Remove</h6>
-                    </div>
+                </div>
+                <div class="sub-total">
+                    <h6>$${itemSubtotal.toFixed(2)}</h6>
+                </div>
+                <div class="action-b">
+                    <h6 class="delete-b" data-index="${index}">Remove</h6>
+                </div>
             `;
 
             // Append the cart item to the cart div
